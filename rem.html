@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .trangle{
+        width: 0;
+        height: 0;
+        border-left: solid 1rem #008000;
+        border-top: solid .5rem transparent;
+        border-bottom: solid .5rem transparent;
+    }
+    .font{
+        font-size: .16rem;
+    }
+    .border{
+        width: 1rem;
+        height: 1rem;
+        border: solid 1px green
+    }
+</style>
+<body>
+    <div class="font">字体<div>
+    <div class="trangle"></div>
+    <div class="border"></div>
+</body>
+</html>
+<script>
+    var width = 750;
+    var clientWidth =  document.documentElement.clientWidth;
+    //set 1rem = 100px
+    function set(){
+        console.log(123,clientWidth)
+        document.documentElement.style.fontSize = (clientWidth/width)*100+'px'
+    }
+    set()
+    window.onresize = set
+</script>
